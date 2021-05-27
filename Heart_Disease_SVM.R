@@ -19,7 +19,7 @@ svm_train<-train(X0.2 ~.,data=training_data,method="svmLinear", trControl=train_
 
 testing_predictions<-predict(svm_train, newdata=testing_data)
 
-#condusion matrix
+#confusion matrix
 cm <-confusionMatrix(testing_predictions,testing_data$X0.2)
 
 total <- cm$table[1,1] + cm$table[2,1] + cm$table[1,2] + cm$table[2,2]
